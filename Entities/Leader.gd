@@ -1,14 +1,12 @@
-extends RigidBody2D
-
-export var speed = 100
-export var alignment: bool # true: player | false: enemy
+extends "res://Entities/Entity.gd"
 
 func _ready():
-	$AnimatedSprite.flip_h = !alignment
 	$AnimatedSprite.animation = "walk"
 	$AnimatedSprite.play()
 
 func _physics_process(delta):
+	# Move either forward or backward based on whether 
+	# this is a player or enemy entity
 	if alignment == true:
 		position.x += speed * delta
 	else:
