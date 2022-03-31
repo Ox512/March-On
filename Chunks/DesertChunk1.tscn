@@ -8,6 +8,7 @@
 extents = Vector2( 128, 4.5 )
 
 [node name="Chunk" type="StaticBody2D"]
+collision_mask = 2
 
 [node name="DecorRock3" type="Sprite" parent="."]
 position = Vector2( -33, -122 )

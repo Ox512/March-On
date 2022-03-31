@@ -56,11 +56,11 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 speed = 42
 health = 400
-alignment = true
 entity_scenes = [ ExtResource( 3 ) ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -81,5 +81,4 @@ margin_top = 2.0
 margin_right = 22.0
 margin_bottom = 22.0
 
-[connection signal="pressed" from="HUD/SpawnButtons/SpawnBarbarian" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="HUD/SpawnButtons/SpawnBarbarian" to="." method="_on_SpawnBarbarian_pressed"]
