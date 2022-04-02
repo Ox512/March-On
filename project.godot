@@ -75,7 +75,8 @@ cam_move_down={
 [layer_names]
 
 2d_physics/layer_1="world"
-2d_physics/layer_2="entities"
+2d_physics/layer_2="player_entities"
+2d_physics/layer_3="enemy_entities"
 
 [physics]
 

@@ -25,6 +25,7 @@ func _ready():
 	front_x = chunks[CHUNK_COUNT - 1].position.x
 
 func _process(delta):
+	# Delete chunks that have been passed, and generate new ones
 	if chunks[back_index].position.x < $Player.position.x - delete_dist:
 		chunks[back_index].queue_free()
 		

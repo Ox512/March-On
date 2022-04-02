@@ -55,11 +55,11 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[node name="Enemy" type="KinematicBody2D"]
-collision_layer = 2
+[node name="Enemy" type="KinematicBody2D" groups=["entities"]]
+collision_layer = 0
 script = ExtResource( 1 )
 speed = 42
-health = 400
+health = 400.0
 enemy = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

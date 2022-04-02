@@ -56,8 +56,8 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
-collision_layer = 2
+[node name="Player" type="KinematicBody2D" groups=["entities"]]
+collision_layer = 0
 script = ExtResource( 2 )
 speed = 42
 health = 400
