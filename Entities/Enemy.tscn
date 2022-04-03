@@ -1,10 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Entities/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Entities/General.png" type="Texture" id=2]
+[ext_resource path="res://Entities/Barbarian.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 12.5, 27 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
@@ -38,21 +43,17 @@ region = Rect2( 224, 0, 32, 64 )
 atlas = ExtResource( 2 )
 region = Rect2( 256, 0, 32, 64 )
 
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 64 )
-
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
-"loop": true,
-"name": "walk",
-"speed": 8.0
-}, {
 "frames": [ SubResource( 13 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 1.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "walk",
+"speed": 8.0
 } ]
 
 [node name="Enemy" type="KinematicBody2D" groups=["entities"]]
@@ -61,6 +62,7 @@ script = ExtResource( 1 )
 speed = 42
 health = 400.0
 enemy = true
+troop_scenes = [ ExtResource( 3 ) ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.5, 5 )

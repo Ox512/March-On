@@ -61,13 +61,15 @@ collision_layer = 0
 script = ExtResource( 1 )
 speed = 42
 health = 150.0
-desired_offset = 128
+desired_offset = 256
+tag_cost = 1
 damage = 20.0
 cooldown = 2.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "walk"
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -47,3 +47,6 @@ func _on_EnemyTimer_timeout():
 	add_child(enemy)
 	enemy.position = Vector2($Player.position.x + 512, $Player.position.y)
 	enemy.gen_army(1)
+
+func exit_to_main_menu():
+	get_tree().change_scene("res://MainMenu.tscn")

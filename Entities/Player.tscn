@@ -60,8 +60,9 @@ animations = [ {
 collision_layer = 0
 script = ExtResource( 2 )
 speed = 42
-health = 400
-entity_scenes = [ ExtResource( 3 ) ]
+health = 1.0
+troop_scenes = [ ExtResource( 3 ) ]
+troop_costs = [ 1 ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.5, 5 )

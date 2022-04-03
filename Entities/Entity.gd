@@ -47,5 +47,9 @@ func take_damage(damage: float):
 		_die()
 
 func _die():
+	if name == "Player":
+		get_tree().call_group("entities", "queue_free")
+		get_parent().exit_to_main_menu()
+	
 	emit_signal("on_death")
 	queue_free()
